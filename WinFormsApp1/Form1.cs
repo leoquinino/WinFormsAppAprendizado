@@ -29,10 +29,36 @@ namespace WinFormsApp1
             media = (nota1 + nota2 + nota3 + nota4) / 4;
             textBoxMedia.Text = Convert.ToString(media);
 
-            if (media >= numericUpDownMedia.Value)            
-                lbResultado.Text = "Parabéns Aprovado !";
-            else
-                lbResultado.Text = "Infelizmente Reprovado !";
+
+            /*  OPERADORES
+             == IGUAL
+             != DIFERENTE
+             && AND
+             || OR
+             >  MAIOR QUE
+             <  MENOR QUE
+             <= MENOR IGUAL
+             >= MAIOR IGUAL
+            */
+
+            /* INCREMENTOS / DECREMENTOS
+             ++ --> INCREMENTA +1
+             -- --> DECREMENTA -1
+            EXEMPLO: 
+                MEDIA = += 
+                MEDIA = --
+            */
+
+            if (media < numericUpDownMediaLimite.Value)
+                lbResultado.Text = "Infelizmente REPROVADO ESTUDE MAIS !";
+            else if (media >= numericUpDownMediaLimite.Value && media < numericUpDownMedia.Value)            
+                lbResultado.Text = "Parabéns APROVADO no Limite !";
+            else if (media > numericUpDownMediaLimite.Value && media == numericUpDownMedia.Value)
+                lbResultado.Text = "Parabéns APROVADO na Média !";
+            else if (media > numericUpDownMedia.Value && media < numericUpDownMediaLouvor.Value)
+                lbResultado.Text = "Parabéns APROVADO Acima da Média !";
+            else if (media >= numericUpDownMediaLouvor.Value)
+                lbResultado.Text = "Parabéns APROVADO Acima da Média e com muito Louvor !";            
         }
 
         public FrmMeuAppTestes()

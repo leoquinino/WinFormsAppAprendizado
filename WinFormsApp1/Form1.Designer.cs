@@ -42,6 +42,7 @@
             this.lblParcela2 = new System.Windows.Forms.Label();
             this.lblParcela1 = new System.Windows.Forms.Label();
             this.PageNotasMedia = new System.Windows.Forms.TabPage();
+            this.lbResultado = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDownMedia = new System.Windows.Forms.NumericUpDown();
             this.btCalcMedia = new System.Windows.Forms.Button();
@@ -55,12 +56,17 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNota1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.lbResultado = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDownMediaLimite = new System.Windows.Forms.NumericUpDown();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDownMediaLouvor = new System.Windows.Forms.NumericUpDown();
             this.tabControl1.SuspendLayout();
             this.PageBotoes.SuspendLayout();
             this.PageCalcular.SuspendLayout();
             this.PageNotasMedia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMedia)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLimite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLouvor)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -199,6 +205,10 @@
             // 
             // PageNotasMedia
             // 
+            this.PageNotasMedia.Controls.Add(this.label8);
+            this.PageNotasMedia.Controls.Add(this.numericUpDownMediaLouvor);
+            this.PageNotasMedia.Controls.Add(this.label7);
+            this.PageNotasMedia.Controls.Add(this.numericUpDownMediaLimite);
             this.PageNotasMedia.Controls.Add(this.lbResultado);
             this.PageNotasMedia.Controls.Add(this.label6);
             this.PageNotasMedia.Controls.Add(this.numericUpDownMedia);
@@ -221,10 +231,19 @@
             this.PageNotasMedia.Text = "Médias";
             this.PageNotasMedia.UseVisualStyleBackColor = true;
             // 
+            // lbResultado
+            // 
+            this.lbResultado.AutoSize = true;
+            this.lbResultado.Location = new System.Drawing.Point(13, 208);
+            this.lbResultado.Name = "lbResultado";
+            this.lbResultado.Size = new System.Drawing.Size(59, 15);
+            this.lbResultado.TabIndex = 13;
+            this.lbResultado.Text = "Resultado";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(323, 15);
+            this.label6.Location = new System.Drawing.Point(321, 77);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(72, 30);
             this.label6.TabIndex = 12;
@@ -232,7 +251,7 @@
             // 
             // numericUpDownMedia
             // 
-            this.numericUpDownMedia.Location = new System.Drawing.Point(401, 22);
+            this.numericUpDownMedia.Location = new System.Drawing.Point(415, 86);
             this.numericUpDownMedia.Name = "numericUpDownMedia";
             this.numericUpDownMedia.Size = new System.Drawing.Size(61, 23);
             this.numericUpDownMedia.TabIndex = 11;
@@ -332,14 +351,47 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nota1";
             // 
-            // lbResultado
+            // label7
             // 
-            this.lbResultado.AutoSize = true;
-            this.lbResultado.Location = new System.Drawing.Point(13, 208);
-            this.lbResultado.Name = "lbResultado";
-            this.lbResultado.Size = new System.Drawing.Size(59, 15);
-            this.lbResultado.TabIndex = 13;
-            this.lbResultado.Text = "Resultado";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(321, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 45);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Média  para\r\nAprovação  \r\nLimite ?";
+            // 
+            // numericUpDownMediaLimite
+            // 
+            this.numericUpDownMediaLimite.Location = new System.Drawing.Point(415, 24);
+            this.numericUpDownMediaLimite.Name = "numericUpDownMediaLimite";
+            this.numericUpDownMediaLimite.Size = new System.Drawing.Size(61, 23);
+            this.numericUpDownMediaLimite.TabIndex = 14;
+            this.numericUpDownMediaLimite.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(321, 135);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 45);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Média  para\r\nAprovação \r\ncom Louvor ?\r\n";
+            // 
+            // numericUpDownMediaLouvor
+            // 
+            this.numericUpDownMediaLouvor.Location = new System.Drawing.Point(415, 144);
+            this.numericUpDownMediaLouvor.Name = "numericUpDownMediaLouvor";
+            this.numericUpDownMediaLouvor.Size = new System.Drawing.Size(61, 23);
+            this.numericUpDownMediaLouvor.TabIndex = 16;
+            this.numericUpDownMediaLouvor.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             // 
             // FrmMeuAppTestes
             // 
@@ -357,6 +409,8 @@
             this.PageNotasMedia.ResumeLayout(false);
             this.PageNotasMedia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMedia)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLimite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLouvor)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -391,5 +445,9 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDownMedia;
         private System.Windows.Forms.Label lbResultado;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.NumericUpDown numericUpDownMediaLouvor;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.NumericUpDown numericUpDownMediaLimite;
     }
 }
