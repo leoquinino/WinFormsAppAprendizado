@@ -61,6 +61,70 @@ namespace WinFormsApp1
                 lbResultado.Text = "Parabéns APROVADO Acima da Média e com muito Louvor !";            
         }
 
+        private void btOk_Loop_Click(object sender, EventArgs e)
+        {
+            lblProcessamento.Visible = false;
+
+            //incrementa 1 em 1 valor++  ou valor+=1
+            //incrementa 2 em 2 valor+=2
+            //etc...
+
+            //loop for
+            for (int valor = 1; valor <= 50; valor+=1)
+            {
+                ListView.Items.Add(valor.ToString());
+            }
+
+            lblProcessamento.Text = "Processamento...";
+            lblProcessamento.Visible = true;
+
+            int vezes = 1;
+
+            string txt = "";
+
+            //lopp while
+            while (vezes <= ListView.Items.Count)
+            {
+                txt = "Processamento... " + vezes.ToString();
+
+                lblProcessamento.Text = txt.ToUpper();
+                vezes++;
+            }
+        }
+
+        private void tabControl1_Enter(object sender, EventArgs e)
+        {
+            comboBoxTipoForEach.SelectedIndex = 0;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            listBoxForEach.Items.Clear();
+
+            //looop foreach com char
+            if (comboBoxTipoForEach.SelectedIndex == 0)
+            {
+                string frase = "Meu Curso de C# Vamos Testar os Recursos";
+                foreach (char f in frase)
+                {
+                    listBoxForEach.Items.Add(f);
+                }
+            }
+
+            if (comboBoxTipoForEach.SelectedIndex == 1)
+            {
+                List<string> listaNome = new List<string>()
+                {
+                    "Leo", "Gau", "Felipe", "Gisele", "Elisa"
+                };
+
+                foreach (string lista in listaNome)
+                {
+                    listBoxForEach.Items.Add (lista);
+                }
+            }
+        }
+
         public FrmMeuAppTestes()
         {
             InitializeComponent();

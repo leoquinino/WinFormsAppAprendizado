@@ -42,6 +42,10 @@
             this.lblParcela2 = new System.Windows.Forms.Label();
             this.lblParcela1 = new System.Windows.Forms.Label();
             this.PageNotasMedia = new System.Windows.Forms.TabPage();
+            this.label8 = new System.Windows.Forms.Label();
+            this.numericUpDownMediaLouvor = new System.Windows.Forms.NumericUpDown();
+            this.label7 = new System.Windows.Forms.Label();
+            this.numericUpDownMediaLimite = new System.Windows.Forms.NumericUpDown();
             this.lbResultado = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDownMedia = new System.Windows.Forms.NumericUpDown();
@@ -56,17 +60,25 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNota1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.numericUpDownMediaLimite = new System.Windows.Forms.NumericUpDown();
-            this.label8 = new System.Windows.Forms.Label();
-            this.numericUpDownMediaLouvor = new System.Windows.Forms.NumericUpDown();
+            this.tabPageLoops = new System.Windows.Forms.TabPage();
+            this.lblProcessamento = new System.Windows.Forms.Label();
+            this.btOk_Loop = new System.Windows.Forms.Button();
+            this.ListView = new System.Windows.Forms.ListBox();
+            this.tabPageForEach = new System.Windows.Forms.TabPage();
+            this.lblTipoForEach = new System.Windows.Forms.Label();
+            this.comboBoxTipoForEach = new System.Windows.Forms.ComboBox();
+            this.btnForEach = new System.Windows.Forms.Button();
+            this.listBoxForEach = new System.Windows.Forms.ListBox();
+            this.tabPageArray = new System.Windows.Forms.TabPage();
             this.tabControl1.SuspendLayout();
             this.PageBotoes.SuspendLayout();
             this.PageCalcular.SuspendLayout();
             this.PageNotasMedia.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMedia)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLimite)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLouvor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLimite)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMedia)).BeginInit();
+            this.tabPageLoops.SuspendLayout();
+            this.tabPageForEach.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -77,12 +89,16 @@
             this.tabControl1.Controls.Add(this.PageBotoes);
             this.tabControl1.Controls.Add(this.PageCalcular);
             this.tabControl1.Controls.Add(this.PageNotasMedia);
+            this.tabControl1.Controls.Add(this.tabPageLoops);
+            this.tabControl1.Controls.Add(this.tabPageForEach);
+            this.tabControl1.Controls.Add(this.tabPageArray);
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(632, 293);
             this.tabControl1.TabIndex = 3;
+            this.tabControl1.Enter += new System.EventHandler(this.tabControl1_Enter);
             // 
             // PageBotoes
             // 
@@ -231,6 +247,48 @@
             this.PageNotasMedia.Text = "Médias";
             this.PageNotasMedia.UseVisualStyleBackColor = true;
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(321, 135);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(79, 45);
+            this.label8.TabIndex = 17;
+            this.label8.Text = "Média  para\r\nAprovação \r\ncom Louvor ?\r\n";
+            // 
+            // numericUpDownMediaLouvor
+            // 
+            this.numericUpDownMediaLouvor.Location = new System.Drawing.Point(415, 144);
+            this.numericUpDownMediaLouvor.Name = "numericUpDownMediaLouvor";
+            this.numericUpDownMediaLouvor.Size = new System.Drawing.Size(61, 23);
+            this.numericUpDownMediaLouvor.TabIndex = 16;
+            this.numericUpDownMediaLouvor.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(321, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 45);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Média  para\r\nAprovação  \r\nLimite ?";
+            // 
+            // numericUpDownMediaLimite
+            // 
+            this.numericUpDownMediaLimite.Location = new System.Drawing.Point(415, 24);
+            this.numericUpDownMediaLimite.Name = "numericUpDownMediaLimite";
+            this.numericUpDownMediaLimite.Size = new System.Drawing.Size(61, 23);
+            this.numericUpDownMediaLimite.TabIndex = 14;
+            this.numericUpDownMediaLimite.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            // 
             // lbResultado
             // 
             this.lbResultado.AutoSize = true;
@@ -351,47 +409,113 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nota1";
             // 
-            // label7
+            // tabPageLoops
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(321, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 45);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Média  para\r\nAprovação  \r\nLimite ?";
+            this.tabPageLoops.Controls.Add(this.lblProcessamento);
+            this.tabPageLoops.Controls.Add(this.btOk_Loop);
+            this.tabPageLoops.Controls.Add(this.ListView);
+            this.tabPageLoops.Location = new System.Drawing.Point(4, 24);
+            this.tabPageLoops.Name = "tabPageLoops";
+            this.tabPageLoops.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageLoops.Size = new System.Drawing.Size(624, 265);
+            this.tabPageLoops.TabIndex = 3;
+            this.tabPageLoops.Text = "Loops";
+            this.tabPageLoops.UseVisualStyleBackColor = true;
             // 
-            // numericUpDownMediaLimite
+            // lblProcessamento
             // 
-            this.numericUpDownMediaLimite.Location = new System.Drawing.Point(415, 24);
-            this.numericUpDownMediaLimite.Name = "numericUpDownMediaLimite";
-            this.numericUpDownMediaLimite.Size = new System.Drawing.Size(61, 23);
-            this.numericUpDownMediaLimite.TabIndex = 14;
-            this.numericUpDownMediaLimite.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
+            this.lblProcessamento.AutoSize = true;
+            this.lblProcessamento.Location = new System.Drawing.Point(402, 15);
+            this.lblProcessamento.Name = "lblProcessamento";
+            this.lblProcessamento.Size = new System.Drawing.Size(100, 15);
+            this.lblProcessamento.TabIndex = 2;
+            this.lblProcessamento.Text = "Processamento....";
+            this.lblProcessamento.Visible = false;
             // 
-            // label8
+            // btOk_Loop
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(321, 135);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(79, 45);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Média  para\r\nAprovação \r\ncom Louvor ?\r\n";
+            this.btOk_Loop.Location = new System.Drawing.Point(80, 211);
+            this.btOk_Loop.Name = "btOk_Loop";
+            this.btOk_Loop.Size = new System.Drawing.Size(82, 24);
+            this.btOk_Loop.TabIndex = 1;
+            this.btOk_Loop.Text = "Ok";
+            this.btOk_Loop.UseVisualStyleBackColor = true;
+            this.btOk_Loop.Click += new System.EventHandler(this.btOk_Loop_Click);
             // 
-            // numericUpDownMediaLouvor
+            // ListView
             // 
-            this.numericUpDownMediaLouvor.Location = new System.Drawing.Point(415, 144);
-            this.numericUpDownMediaLouvor.Name = "numericUpDownMediaLouvor";
-            this.numericUpDownMediaLouvor.Size = new System.Drawing.Size(61, 23);
-            this.numericUpDownMediaLouvor.TabIndex = 16;
-            this.numericUpDownMediaLouvor.Value = new decimal(new int[] {
-            10,
-            0,
-            0,
-            0});
+            this.ListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ListView.FormattingEnabled = true;
+            this.ListView.ItemHeight = 15;
+            this.ListView.Location = new System.Drawing.Point(6, 6);
+            this.ListView.Name = "ListView";
+            this.ListView.Size = new System.Drawing.Size(242, 197);
+            this.ListView.TabIndex = 0;
+            // 
+            // tabPageForEach
+            // 
+            this.tabPageForEach.Controls.Add(this.lblTipoForEach);
+            this.tabPageForEach.Controls.Add(this.comboBoxTipoForEach);
+            this.tabPageForEach.Controls.Add(this.btnForEach);
+            this.tabPageForEach.Controls.Add(this.listBoxForEach);
+            this.tabPageForEach.Location = new System.Drawing.Point(4, 24);
+            this.tabPageForEach.Name = "tabPageForEach";
+            this.tabPageForEach.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageForEach.Size = new System.Drawing.Size(624, 265);
+            this.tabPageForEach.TabIndex = 4;
+            this.tabPageForEach.Text = "ForEach";
+            this.tabPageForEach.UseVisualStyleBackColor = true;
+            // 
+            // lblTipoForEach
+            // 
+            this.lblTipoForEach.AutoSize = true;
+            this.lblTipoForEach.Location = new System.Drawing.Point(279, 15);
+            this.lblTipoForEach.Name = "lblTipoForEach";
+            this.lblTipoForEach.Size = new System.Drawing.Size(91, 15);
+            this.lblTipoForEach.TabIndex = 6;
+            this.lblTipoForEach.Text = "Tipo de ForEach";
+            // 
+            // comboBoxTipoForEach
+            // 
+            this.comboBoxTipoForEach.DisplayMember = "0";
+            this.comboBoxTipoForEach.FormattingEnabled = true;
+            this.comboBoxTipoForEach.Items.AddRange(new object[] {
+            "Usando CHAR",
+            "Usando List<string>"});
+            this.comboBoxTipoForEach.Location = new System.Drawing.Point(264, 33);
+            this.comboBoxTipoForEach.Name = "comboBoxTipoForEach";
+            this.comboBoxTipoForEach.Size = new System.Drawing.Size(166, 23);
+            this.comboBoxTipoForEach.TabIndex = 5;
+            // 
+            // btnForEach
+            // 
+            this.btnForEach.Location = new System.Drawing.Point(279, 62);
+            this.btnForEach.Name = "btnForEach";
+            this.btnForEach.Size = new System.Drawing.Size(114, 24);
+            this.btnForEach.TabIndex = 4;
+            this.btnForEach.Text = "ForEach";
+            this.btnForEach.UseVisualStyleBackColor = true;
+            this.btnForEach.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // listBoxForEach
+            // 
+            this.listBoxForEach.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxForEach.FormattingEnabled = true;
+            this.listBoxForEach.ItemHeight = 15;
+            this.listBoxForEach.Location = new System.Drawing.Point(3, 6);
+            this.listBoxForEach.Name = "listBoxForEach";
+            this.listBoxForEach.Size = new System.Drawing.Size(242, 197);
+            this.listBoxForEach.TabIndex = 1;
+            // 
+            // tabPageArray
+            // 
+            this.tabPageArray.Location = new System.Drawing.Point(4, 24);
+            this.tabPageArray.Name = "tabPageArray";
+            this.tabPageArray.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageArray.Size = new System.Drawing.Size(624, 265);
+            this.tabPageArray.TabIndex = 5;
+            this.tabPageArray.Text = "Arrays";
+            this.tabPageArray.UseVisualStyleBackColor = true;
             // 
             // FrmMeuAppTestes
             // 
@@ -400,7 +524,7 @@
             this.ClientSize = new System.Drawing.Size(634, 292);
             this.Controls.Add(this.tabControl1);
             this.Name = "FrmMeuAppTestes";
-            this.Text = "Aplicação Testes Eventos Button";
+            this.Text = "Aplicação Testes - Diversos Testes";
             this.tabControl1.ResumeLayout(false);
             this.PageBotoes.ResumeLayout(false);
             this.PageBotoes.PerformLayout();
@@ -408,9 +532,13 @@
             this.PageCalcular.PerformLayout();
             this.PageNotasMedia.ResumeLayout(false);
             this.PageNotasMedia.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMedia)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLimite)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLouvor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMediaLimite)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMedia)).EndInit();
+            this.tabPageLoops.ResumeLayout(false);
+            this.tabPageLoops.PerformLayout();
+            this.tabPageForEach.ResumeLayout(false);
+            this.tabPageForEach.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -449,5 +577,15 @@
         private System.Windows.Forms.NumericUpDown numericUpDownMediaLouvor;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.NumericUpDown numericUpDownMediaLimite;
+        private System.Windows.Forms.TabPage tabPageLoops;
+        private System.Windows.Forms.Button btOk_Loop;
+        private System.Windows.Forms.ListBox ListView;
+        private System.Windows.Forms.Label lblProcessamento;
+        private System.Windows.Forms.TabPage tabPageForEach;
+        private System.Windows.Forms.ListBox listBoxForEach;
+        private System.Windows.Forms.Label lblTipoForEach;
+        private System.Windows.Forms.ComboBox comboBoxTipoForEach;
+        private System.Windows.Forms.Button btnForEach;
+        private System.Windows.Forms.TabPage tabPageArray;
     }
 }
