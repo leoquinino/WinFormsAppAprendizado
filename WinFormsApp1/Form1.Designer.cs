@@ -70,6 +70,11 @@
             this.btnForEach = new System.Windows.Forms.Button();
             this.listBoxForEach = new System.Windows.Forms.ListBox();
             this.tabPageArray = new System.Windows.Forms.TabPage();
+            this.btnArray = new System.Windows.Forms.Button();
+            this.listBoxArrays = new System.Windows.Forms.ListBox();
+            this.tabPageClassePessoa = new System.Windows.Forms.TabPage();
+            this.listBoxPessoas = new System.Windows.Forms.ListBox();
+            this.btnProcessaPessoas = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.PageBotoes.SuspendLayout();
             this.PageCalcular.SuspendLayout();
@@ -79,6 +84,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownMedia)).BeginInit();
             this.tabPageLoops.SuspendLayout();
             this.tabPageForEach.SuspendLayout();
+            this.tabPageArray.SuspendLayout();
+            this.tabPageClassePessoa.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,6 +99,7 @@
             this.tabControl1.Controls.Add(this.tabPageLoops);
             this.tabControl1.Controls.Add(this.tabPageForEach);
             this.tabControl1.Controls.Add(this.tabPageArray);
+            this.tabControl1.Controls.Add(this.tabPageClassePessoa);
             this.tabControl1.Location = new System.Drawing.Point(3, 3);
             this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
@@ -434,7 +442,7 @@
             // 
             // btOk_Loop
             // 
-            this.btOk_Loop.Location = new System.Drawing.Point(80, 211);
+            this.btOk_Loop.Location = new System.Drawing.Point(82, 238);
             this.btOk_Loop.Name = "btOk_Loop";
             this.btOk_Loop.Size = new System.Drawing.Size(82, 24);
             this.btOk_Loop.TabIndex = 1;
@@ -449,7 +457,7 @@
             this.ListView.ItemHeight = 15;
             this.ListView.Location = new System.Drawing.Point(6, 6);
             this.ListView.Name = "ListView";
-            this.ListView.Size = new System.Drawing.Size(242, 197);
+            this.ListView.Size = new System.Drawing.Size(242, 227);
             this.ListView.TabIndex = 0;
             // 
             // tabPageForEach
@@ -495,7 +503,7 @@
             this.btnForEach.TabIndex = 4;
             this.btnForEach.Text = "ForEach";
             this.btnForEach.UseVisualStyleBackColor = true;
-            this.btnForEach.Click += new System.EventHandler(this.button1_Click);
+            this.btnForEach.Click += new System.EventHandler(this.btnForEach_Click);
             // 
             // listBoxForEach
             // 
@@ -504,11 +512,13 @@
             this.listBoxForEach.ItemHeight = 15;
             this.listBoxForEach.Location = new System.Drawing.Point(3, 6);
             this.listBoxForEach.Name = "listBoxForEach";
-            this.listBoxForEach.Size = new System.Drawing.Size(242, 197);
+            this.listBoxForEach.Size = new System.Drawing.Size(242, 257);
             this.listBoxForEach.TabIndex = 1;
             // 
             // tabPageArray
             // 
+            this.tabPageArray.Controls.Add(this.btnArray);
+            this.tabPageArray.Controls.Add(this.listBoxArrays);
             this.tabPageArray.Location = new System.Drawing.Point(4, 24);
             this.tabPageArray.Name = "tabPageArray";
             this.tabPageArray.Padding = new System.Windows.Forms.Padding(3);
@@ -516,6 +526,58 @@
             this.tabPageArray.TabIndex = 5;
             this.tabPageArray.Text = "Arrays";
             this.tabPageArray.UseVisualStyleBackColor = true;
+            // 
+            // btnArray
+            // 
+            this.btnArray.Location = new System.Drawing.Point(362, 20);
+            this.btnArray.Name = "btnArray";
+            this.btnArray.Size = new System.Drawing.Size(111, 27);
+            this.btnArray.TabIndex = 3;
+            this.btnArray.Text = "Processar Array";
+            this.btnArray.UseVisualStyleBackColor = true;
+            this.btnArray.Click += new System.EventHandler(this.btnArray_Click);
+            // 
+            // listBoxArrays
+            // 
+            this.listBoxArrays.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxArrays.FormattingEnabled = true;
+            this.listBoxArrays.ItemHeight = 15;
+            this.listBoxArrays.Location = new System.Drawing.Point(3, 5);
+            this.listBoxArrays.Name = "listBoxArrays";
+            this.listBoxArrays.Size = new System.Drawing.Size(242, 257);
+            this.listBoxArrays.TabIndex = 2;
+            // 
+            // tabPageClassePessoa
+            // 
+            this.tabPageClassePessoa.Controls.Add(this.listBoxPessoas);
+            this.tabPageClassePessoa.Controls.Add(this.btnProcessaPessoas);
+            this.tabPageClassePessoa.Location = new System.Drawing.Point(4, 24);
+            this.tabPageClassePessoa.Name = "tabPageClassePessoa";
+            this.tabPageClassePessoa.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPageClassePessoa.Size = new System.Drawing.Size(624, 265);
+            this.tabPageClassePessoa.TabIndex = 6;
+            this.tabPageClassePessoa.Text = "Classe Pessoas";
+            this.tabPageClassePessoa.UseVisualStyleBackColor = true;
+            // 
+            // listBoxPessoas
+            // 
+            this.listBoxPessoas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listBoxPessoas.FormattingEnabled = true;
+            this.listBoxPessoas.ItemHeight = 15;
+            this.listBoxPessoas.Location = new System.Drawing.Point(6, 35);
+            this.listBoxPessoas.Name = "listBoxPessoas";
+            this.listBoxPessoas.Size = new System.Drawing.Size(609, 212);
+            this.listBoxPessoas.TabIndex = 3;
+            // 
+            // btnProcessaPessoas
+            // 
+            this.btnProcessaPessoas.Location = new System.Drawing.Point(6, 6);
+            this.btnProcessaPessoas.Name = "btnProcessaPessoas";
+            this.btnProcessaPessoas.Size = new System.Drawing.Size(128, 23);
+            this.btnProcessaPessoas.TabIndex = 0;
+            this.btnProcessaPessoas.Text = "Listar Pessoas";
+            this.btnProcessaPessoas.UseVisualStyleBackColor = true;
+            this.btnProcessaPessoas.Click += new System.EventHandler(this.btnProcessaPessoas_Click);
             // 
             // FrmMeuAppTestes
             // 
@@ -539,6 +601,8 @@
             this.tabPageLoops.PerformLayout();
             this.tabPageForEach.ResumeLayout(false);
             this.tabPageForEach.PerformLayout();
+            this.tabPageArray.ResumeLayout(false);
+            this.tabPageClassePessoa.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -587,5 +651,10 @@
         private System.Windows.Forms.ComboBox comboBoxTipoForEach;
         private System.Windows.Forms.Button btnForEach;
         private System.Windows.Forms.TabPage tabPageArray;
+        private System.Windows.Forms.ListBox listBoxArrays;
+        private System.Windows.Forms.Button btnArray;
+        private System.Windows.Forms.TabPage tabPageClassePessoa;
+        private System.Windows.Forms.Button btnProcessaPessoas;
+        private System.Windows.Forms.ListBox listBoxPessoas;
     }
 }
